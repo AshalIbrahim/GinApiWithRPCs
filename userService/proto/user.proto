@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package user;
+option go_package = "proto/userpb";
+
+message User {
+    uint32 id = 1;
+    string name = 2;
+    int32 age = 3;
+}
+
+message Empty {}
+
+message GetUserRequest {
+    uint32 id = 1;
+}
+
+message UserList {
+    repeated User users = 1;
+}
+
+message DeleteUserRequest {
+    uint32 id = 1;
+}
+
+message MessageResponse {
+    string message = 1;
+}
+
+service UserService {
+    rpc GetUsers (Empty) returns (UserList);
+    rpc CreateUser (User) returns (User);
+    rpc UpdateUser (User) returns (MessageResponse);
+    rpc DeleteUser (DeleteUserRequest) returns (MessageResponse);
+}
