@@ -6,7 +6,7 @@ import (
 	"strconv"
 
 	"github.com/gin-gonic/gin"
-	userpb "github.com/AshalIbrahim/GinApiWithRPCs/proto/userpb"
+	userpb "github.com/AshalIbrahim/ginApi/proto/userpb"
 )
 
 // AllUsers godoc

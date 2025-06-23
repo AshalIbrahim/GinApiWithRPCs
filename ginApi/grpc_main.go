@@ -2,7 +2,7 @@ package main
 
 import (
 	"log"
-	"os"
+	//"os"
 
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
@@ -10,7 +10,7 @@ import (
 	swaggerFiles "github.com/swaggo/files"
 
 	"google.golang.org/grpc"
-	userpb "github.com/AshalIbrahim/GinApiWithRPCs/proto/userpb" // adjust path as needed
+	userpb "github.com/AshalIbrahim/ginApi/proto/userpb" // adjust path as needed
 )
 
 var grpcClient userpb.UserServiceClient
